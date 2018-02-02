@@ -1,0 +1,34 @@
+
+<div class="container-fluid text-center">
+<h1 class = "text-capitalize text-center">
+ {{title}}
+</h1>
+  
+    <h1>Temperature Monitor</h1>
+    <form>
+      <label for="temperature">Add Temperature:</label>
+       <input type="number" min="-100" max="100" [(ngModel)]="temperature" name="temperature" id="temperature">
+      <button (click)="recordTemperature(temperature)" class="btn btn-primary">Add</button>
+      <br>
+      <hr>
+      <label>Storage Size Occupied</label>
+      <br>
+  <progress value={{Filled_Size}} max="{{Available_Size}}"></progress> {{Filled_Size}} / {{Available_Size}}
+    </form>
+    <hr />
+    <section>
+      <button (click)="getCurrentMedian()" class="btn btn-primary">Get Median Temperature</button>
+      <br>
+      <br>
+      <b>Current Median:{{median}}</b>
+      <!-- display current media here-->
+    </section>
+    <hr>
+    <hr>
+    <p><b>developer name:-- Kavya sri --</b></p>
+
+    <hr>
+    
+    <a href="jasmine-test-runner.html">Run Unit Tests</a>
+ <hr>
+  </div>
